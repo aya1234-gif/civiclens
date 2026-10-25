@@ -1,0 +1,23 @@
+/* Design system is in design.css — imported by main.tsx */
+@import './design.css';
+
+/* Responsive sidebar */
+@media (max-width: 900px) {
+  .cl-sidebar {
+    transform: translateX(-100%) !important;
+    box-shadow: none;
+  }
+  .cl-sidebar[data-open="true"] {
+    transform: none !important;
+    box-shadow: var(--shadow-lg) !important;
+  }
+  .cl-main {
+    margin-inline-start: 0 !important;
+  }
+  .cl-burger {
+    display: inline-flex !important;
+  }
+  .cl-topsearch {
+    display: none !important;
+  }
+}

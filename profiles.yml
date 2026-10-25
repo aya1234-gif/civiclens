@@ -1,0 +1,21 @@
+civiclens:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST', 'localhost') }}"
+      port: 5432
+      user: "{{ env_var('POSTGRES_USER', 'civiclens') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD', 'changeme_strong_password') }}"
+      dbname: "{{ env_var('POSTGRES_DB', 'civiclens') }}"
+      schema: public
+      threads: 4
+    prod:
+      type: postgres
+      host: "{{ env_var('POSTGRES_HOST') }}"
+      port: 5432
+      user: "{{ env_var('POSTGRES_USER') }}"
+      password: "{{ env_var('POSTGRES_PASSWORD') }}"
+      dbname: "{{ env_var('POSTGRES_DB') }}"
+      schema: public
+      threads: 8

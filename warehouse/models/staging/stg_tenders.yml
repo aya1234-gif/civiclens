@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_tenders
+    description: >
+      Cleaned and normalised tender listings scraped from marchespublics.gov.ma.
+      One row per unique tender reference.
+
+    columns:
+      - name: reference
+        description: Tender reference number (deduplicated — one row per reference, latest announcement).
+        tests:
+          - not_null
+          - unique
+
+      - name: tender_type
+        description: Category of public contract.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["travaux", "fournitures", "services", "autre"]
+
+      - name: publication_date
+        tests:
+          - not_null
+
+      - name: _loaded_at
+        description: Timestamp when this row was loaded into the warehouse.
+        tests:
+          - not_null
+
+      - name: _source
+        description: Data source identifier.
+        tests:
+          - not_null

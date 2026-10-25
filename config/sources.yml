@@ -1,0 +1,62 @@
+# Registry of Moroccan civic data sources consumed by CivicLens ingestion pipelines.
+# Each entry drives scraper configuration — no source-specific strings live in Python code.
+
+sources:
+  data_gov_ma:
+    name: "Portail National des Données Ouvertes"
+    base_url: "https://data.gov.ma"
+    api_base: "https://data.gov.ma/data/api/3/action"
+    format: ["CSV", "JSON"]
+    cadence: daily
+    auth_required: false
+    notes: "CKAN API at /data/api/3/action (not /api/3)"
+
+  marchespublics:
+    name: "Marchés Publics du Maroc"
+    base_url: "https://www.marchespublics.gov.ma"
+    type: scrape
+    cadence: daily
+    listing_path: "/index.php?page=entreprise.EntrepriseAdvancedSearch"
+    known_issues:
+      - "Anti-bot JS challenge on first visit — needs Playwright warm-up"
+      - "Pagination uses POST with CSRF token; must reuse session"
+      - "Amounts sometimes expressed in kDH, sometimes MDH — normalise to MAD"
+    fields:
+      - reference
+      - contracting_authority
+      - object
+      - tender_type   # travaux | fournitures | services
+      - estimated_amount_mad
+      - publication_date
+      - deadline_date
+      - region
+      - wilaya
+
+  hcp:
+    name: "Haut-Commissariat au Plan"
+    base_url: "https://www.hcp.ma"
+    format: ["Excel", "ZIP"]
+    cadence: monthly
+    datasets:
+      - name: "Recensement Général de la Population"
+        path: "/page-statistiques-sociales.html"
+      - name: "Tableaux de Bord Économiques"
+        path: "/page-statistiques-economiques.html"
+
+  finances_gov_ma:
+    name: "Ministère de l'Économie et des Finances"
+    base_url: "https://www.finances.gov.ma"
+    format: ["PDF", "Excel"]
+    cadence: monthly
+    datasets:
+      - name: "Loi de Finances"
+        path: "/fr/page/loi-de-finances"
+      - name: "Bulletin Mensuel de Statistiques Financières"
+        path: "/fr/page/bulletins-mensuels"
+
+  hdx_morocco:
+    name: "Humanitarian Data Exchange — Morocco"
+    base_url: "https://data.humdata.org/group/mar"
+    format: ["CSV", "GeoJSON"]
+    cadence: weekly
+    notes: "Includes OCHA shapefiles, health facility data, displacement figures"

@@ -1,0 +1,76 @@
+wilaya_raw,wilaya_normalised,region_normalised,region_code,chef_lieu
+TANGER,Tanger-Assilah,Tanger-Tétouan-Al Hoceïma,01,Tanger
+TETOUAN,Tétouan,Tanger-Tétouan-Al Hoceïma,01,Tanger
+AL HOCEIMA,Al Hoceïma,Tanger-Tétouan-Al Hoceïma,01,Tanger
+FAHS ANJRA,Fahs-Anjra,Tanger-Tétouan-Al Hoceïma,01,Tanger
+LARACHE,Larache,Tanger-Tétouan-Al Hoceïma,01,Tanger
+CHEFCHAOUEN,Chefchaouen,Tanger-Tétouan-Al Hoceïma,01,Tanger
+MDIQ FNIDEQ,M'diq-Fnideq,Tanger-Tétouan-Al Hoceïma,01,Tanger
+OUEZZANE,Ouezzane,Tanger-Tétouan-Al Hoceïma,01,Tanger
+OUJDA ANGAD,Oujda-Angad,L'Oriental,02,Oujda
+NADOR,Nador,L'Oriental,02,Oujda
+DRIOUCH,Driouch,L'Oriental,02,Oujda
+BERKANE,Berkane,L'Oriental,02,Oujda
+TAOURIRT,Taourirt,L'Oriental,02,Oujda
+JERADA,Jerada,L'Oriental,02,Oujda
+GUERCIF,Guercif,L'Oriental,02,Oujda
+FIGUIG,Figuig,L'Oriental,02,Oujda
+FES,Fès,Fès-Meknès,03,Fès
+MEKNES,Meknès,Fès-Meknès,03,Fès
+IFRANE,Ifrane,Fès-Meknès,03,Fès
+SEFROU,Séfrou,Fès-Meknès,03,Fès
+MOULAY YACOUB,Moulay Yacoub,Fès-Meknès,03,Fès
+BOULEMANE,Boulemane,Fès-Meknès,03,Fès
+EL HAJEB,El Hajeb,Fès-Meknès,03,Fès
+TAZA,Taza,Fès-Meknès,03,Fès
+TAOUNATE,Taounate,Fès-Meknès,03,Fès
+RABAT,Rabat,Rabat-Salé-Kénitra,04,Rabat
+SALE,Salé,Rabat-Salé-Kénitra,04,Rabat
+TEMARA,Skhirate-Témara,Rabat-Salé-Kénitra,04,Rabat
+KENITRA,Kénitra,Rabat-Salé-Kénitra,04,Rabat
+KHEMISSET,Khémisset,Rabat-Salé-Kénitra,04,Rabat
+SIDI KACEM,Sidi Kacem,Rabat-Salé-Kénitra,04,Rabat
+SIDI SLIMANE,Sidi Slimane,Rabat-Salé-Kénitra,04,Rabat
+BENSLIMANE,Benslimane,Casablanca-Settat,05,Casablanca
+CASABLANCA,Casablanca,Casablanca-Settat,05,Casablanca
+MOHAMMEDIA,Mohammedia,Casablanca-Settat,05,Casablanca
+EL JADIDA,El Jadida,Casablanca-Settat,05,Casablanca
+SETTAT,Settat,Casablanca-Settat,05,Casablanca
+BERRECHID,Berrechid,Casablanca-Settat,05,Casablanca
+NOUACEUR,Nouaceur,Casablanca-Settat,05,Casablanca
+MEDIOUNA,Mediouna,Casablanca-Settat,05,Casablanca
+SIDI BENNOUR,Sidi Bennour,Casablanca-Settat,05,Casablanca
+KHOURIBGA,Khouribga,Béni Mellal-Khénifra,06,Béni Mellal
+BENI MELLAL,Béni Mellal,Béni Mellal-Khénifra,06,Béni Mellal
+AZILAL,Azilal,Béni Mellal-Khénifra,06,Béni Mellal
+FQUIH BEN SALAH,Fquih Ben Salah,Béni Mellal-Khénifra,06,Béni Mellal
+KHENIFRA,Khénifra,Béni Mellal-Khénifra,06,Béni Mellal
+MARRAKECH,Marrakech,Marrakech-Safi,07,Marrakech
+AL HAOUZ,Al Haouz,Marrakech-Safi,07,Marrakech
+CHICHAOUA,Chichaoua,Marrakech-Safi,07,Marrakech
+EL KELAA DES SRAGHNA,El Kelaâ des Sraghna,Marrakech-Safi,07,Marrakech
+ESSAOUIRA,Essaouira,Marrakech-Safi,07,Marrakech
+SAFI,Safi,Marrakech-Safi,07,Marrakech
+YOUSSOUFIA,Youssoufia,Marrakech-Safi,07,Marrakech
+REHAMNA,Rehamna,Marrakech-Safi,07,Marrakech
+AGADIR IDA OUTANANE,Agadir-Ida-Ou-Tanane,Souss-Massa,08,Agadir
+TAROUDANNT,Taroudannt,Souss-Massa,08,Agadir
+TIZNIT,Tiznit,Souss-Massa,08,Agadir
+CHTOUKA AIT BAHA,Chtouka-Aït-Baha,Souss-Massa,08,Agadir
+INEZGANE AIT MELLOUL,Inezgane-Aït-Melloul,Souss-Massa,08,Agadir
+TATA,Tata,Drâa-Tafilalet,09,Errachidia
+ERRACHIDIA,Errachidia,Drâa-Tafilalet,09,Errachidia
+OUARZAZATE,Ouarzazate,Drâa-Tafilalet,09,Errachidia
+TINGHIR,Tinghir,Drâa-Tafilalet,09,Errachidia
+ZAGORA,Zagora,Drâa-Tafilalet,09,Errachidia
+MIDELT,Midelt,Drâa-Tafilalet,09,Errachidia
+LAAYOUNE,Laâyoune,Laâyoune-Sakia El Hamra,10,Laâyoune
+BOUJDOUR,Boujdour,Laâyoune-Sakia El Hamra,10,Laâyoune
+TARFAYA,Tarfaya,Laâyoune-Sakia El Hamra,10,Laâyoune
+ES SEMARA,Es-Semara,Laâyoune-Sakia El Hamra,10,Laâyoune
+DAKHLA,Dakhla-Oued Ed-Dahab,Dakhla-Oued Ed-Dahab,11,Dakhla
+AOUSSERD,Aousserd,Dakhla-Oued Ed-Dahab,11,Dakhla
+GUELMIM,Guelmim,Guelmim-Oued Noun,12,Guelmim
+TAN TAN,Tan-Tan,Guelmim-Oued Noun,12,Guelmim
+SIDI IFNI,Sidi Ifni,Guelmim-Oued Noun,12,Guelmim
+ASSA ZAG,Assa-Zag,Guelmim-Oued Noun,12,Guelmim

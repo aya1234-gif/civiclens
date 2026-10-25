@@ -1,0 +1,273 @@
+/* ============================================================
+   CivicLens — Design System
+   Investigative newsroom data-tool × government-grade trust
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
+
+/* ---------- Tokens : LIGHT (default) ---------- */
+:root {
+  /* paper / sand neutrals */
+  --paper:        #F7F4EE;
+  --paper-2:      #F1ECE2;
+  --surface:      #FFFFFF;
+  --surface-2:    #FBF9F4;
+  --surface-sunk: #F3EFE6;
+
+  /* ink */
+  --ink:          #1C1813;
+  --ink-2:        #4A4337;
+  --muted:        #7C7264;
+  --faint:        #A89C8B;
+
+  /* lines */
+  --line:         #E6DFD1;
+  --line-2:       #D8CFBD;
+  --line-strong:  #C9BEA8;
+
+  /* brand */
+  --red:          #B4232A;   /* Morocco oxblood */
+  --red-ink:      #8A171D;
+  --red-wash:     #F7E6E2;
+  --green:        #1F7A4D;   /* pine */
+  --green-ink:    #155C39;
+  --green-wash:   #E3F0E8;
+
+  /* severity ramp */
+  --sev-high:     #C0392B;
+  --sev-high-bg:  #F8E4E0;
+  --sev-med:      #B9791C;
+  --sev-med-bg:   #F6ECD7;
+  --sev-low:      #2E7D55;
+  --sev-low-bg:   #E3F0E8;
+
+  /* data viz sequence */
+  --viz-1: #B4232A;
+  --viz-2: #C97A2B;
+  --viz-3: #A8923A;
+  --viz-4: #5C8A4A;
+  --viz-5: #1F7A4D;
+  --viz-6: #2E6E7E;
+  --viz-7: #4A5680;
+
+  /* effects */
+  --shadow-sm:  0 1px 2px rgba(40,30,15,0.06), 0 1px 1px rgba(40,30,15,0.04);
+  --shadow-md:  0 4px 16px rgba(40,30,15,0.08), 0 1px 3px rgba(40,30,15,0.05);
+  --shadow-lg:  0 18px 48px rgba(28,22,12,0.18), 0 4px 12px rgba(28,22,12,0.08);
+  --ring:       0 0 0 3px rgba(180,35,42,0.16);
+
+  /* geometry */
+  --r-sm: 5px;
+  --r-md: 9px;
+  --r-lg: 14px;
+  --r-xl: 22px;
+
+  /* density (overridden by [data-density]) */
+  --row-h: 46px;
+  --pad-y: 11px;
+  --cell-x: 16px;
+  --gap: 20px;
+
+  --sidebar-w: 248px;
+
+  color-scheme: light;
+}
+
+/* ---------- Tokens : DARK ---------- */
+[data-theme="dark"] {
+  --paper:        #15120D;
+  --paper-2:      #1A1610;
+  --surface:      #1E1A13;
+  --surface-2:    #221D16;
+  --surface-sunk: #161209;
+
+  --ink:          #F2EDE2;
+  --ink-2:        #D2C8B6;
+  --muted:        #9A8E79;
+  --faint:        #6F6555;
+
+  --line:         #302A20;
+  --line-2:       #3C342699;
+  --line-strong:  #4A4030;
+
+  --red:          #E0625F;
+  --red-ink:      #F0938F;
+  --red-wash:     #3A1E1B;
+  --green:        #5FB585;
+  --green-ink:    #8FD0AC;
+  --green-wash:   #16291F;
+
+  --sev-high:     #E0625F;
+  --sev-high-bg:  #371D1A;
+  --sev-med:      #D9A348;
+  --sev-med-bg:   #322716;
+  --sev-low:      #5FB585;
+  --sev-low-bg:   #16291F;
+
+  --viz-1: #E0625F;
+  --viz-2: #E0A35C;
+  --viz-3: #CDB55E;
+  --viz-4: #8FBE77;
+  --viz-5: #5FB585;
+  --viz-6: #5FA0AE;
+  --viz-7: #8A95C4;
+
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.4);
+  --shadow-md:  0 6px 20px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.4);
+  --shadow-lg:  0 22px 56px rgba(0,0,0,0.6), 0 4px 14px rgba(0,0,0,0.5);
+  --ring:       0 0 0 3px rgba(224,98,95,0.22);
+
+  color-scheme: dark;
+}
+
+/* ---------- Density ---------- */
+[data-density="compact"] {
+  --row-h: 38px;
+  --pad-y: 7px;
+  --cell-x: 12px;
+  --gap: 14px;
+}
+[data-density="comfy"] {
+  --row-h: 56px;
+  --pad-y: 15px;
+  --cell-x: 20px;
+  --gap: 26px;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Hanken Grotesk', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background 0.35s ease, color 0.35s ease;
+}
+#root { height: 100%; }
+
+[data-lang="ar"] { direction: rtl; }
+[data-lang="ar"] .keep-ltr { direction: ltr; }
+.ar-text { font-family: 'IBM Plex Sans Arabic', 'Hanken Grotesk', sans-serif; }
+
+h1,h2,h3,h4,h5 { margin: 0; font-weight: 600; }
+p { margin: 0; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+a { color: inherit; text-decoration: none; }
+input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+::selection { background: var(--red); color: #fff; }
+
+/* scrollbars */
+*::-webkit-scrollbar { width: 11px; height: 11px; }
+*::-webkit-scrollbar-track { background: transparent; }
+*::-webkit-scrollbar-thumb {
+  background: var(--line-2);
+  border-radius: 99px;
+  border: 3px solid var(--paper);
+}
+*::-webkit-scrollbar-thumb:hover { background: var(--line-strong); }
+
+/* ---------- Type utilities ---------- */
+.serif { font-family: 'Newsreader', Georgia, serif; }
+.mono  { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.tnum { font-variant-numeric: tabular-nums; }
+
+/* ---------- Reusable bits ---------- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 3px 9px;
+  border-radius: 99px;
+  white-space: nowrap;
+  line-height: 1.4;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 0 16px;
+  height: 40px;
+  border-radius: var(--r-md);
+  border: 1px solid transparent;
+  transition: all 0.16s ease;
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--red); color: #fff; }
+.btn-primary:hover { background: var(--red-ink); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--line-2); }
+.btn-ghost:hover { background: var(--surface-sunk); border-color: var(--line-strong); }
+.btn-sm { height: 32px; font-size: 13px; padding: 0 12px; border-radius: var(--r-sm); }
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px; height: 38px;
+  border-radius: var(--r-md);
+  color: var(--ink-2);
+  transition: all 0.15s ease;
+}
+.icon-btn:hover { background: var(--surface-sunk); color: var(--ink); }
+
+.divider { height: 1px; background: var(--line); border: none; }
+
+/* focus */
+.focusable:focus-visible,
+input:focus-visible, button:focus-visible, select:focus-visible {
+  outline: none;
+  box-shadow: var(--ring);
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideInRight { from { transform: translateX(100%); } to { transform: none; } }
+@keyframes scaleIn { from { opacity: 0; transform: scale(0.97); } to { opacity: 1; transform: none; } }
+@keyframes shimmer { 0% { background-position: -400px 0; } 100% { background-position: 400px 0; } }
+@keyframes growBar { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+@keyframes dash { to { stroke-dashoffset: 0; } }
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.animate-fadeUp { animation: fadeUp 0.5s cubic-bezier(0.2,0.8,0.2,1) both; }
+.animate-fadeIn { animation: fadeIn 0.4s ease both; }
+
+.skeleton {
+  background: linear-gradient(90deg, var(--surface-sunk) 25%, var(--line) 37%, var(--surface-sunk) 63%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.05ms !important; }
+}

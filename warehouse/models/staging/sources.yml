@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw
+    description: Raw tables loaded directly from scraper JSONL output.
+    tables:
+      - name: tenders
+        description: Raw tender listings from marchespublics.gov.ma.
+        columns:
+          - name: raw_hash
+            description: SHA-256 of the raw row — used as dedup key.
+            tests:
+              - not_null

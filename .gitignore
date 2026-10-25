@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+dist/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+
+# Data
+data/raw/
+data/processed/
+*.jsonl
+*.csv.gz
+
+# Secrets
+.env
+
+# dbt
+warehouse/target/
+warehouse/dbt_packages/
+warehouse/logs/
+
+# ML artefacts
+ml/*/artifacts/
+mlruns/
+
+# Docker
+postgres_data/
+
+# IDE
+.vscode/
+.idea/
